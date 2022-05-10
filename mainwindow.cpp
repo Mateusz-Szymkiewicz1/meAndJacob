@@ -29,7 +29,6 @@ void MainWindow::on_pushButton_clicked()
     close();
 }
 
-
 void MainWindow::on_action_klos_triggered()
 {
     close();
