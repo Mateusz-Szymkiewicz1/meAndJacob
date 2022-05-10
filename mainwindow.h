@@ -12,8 +12,10 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    int licznik;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 private slots:
     void on_pushButton_clicked();
