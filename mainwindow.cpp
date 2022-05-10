@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "QSettings"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,10 +9,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     licznik = 0;
+    QSettings settings("Jakomeks", "Liczownik");
+    int rekord = settings.value("Rekord").toInt();
+    ui->label_4->setText(QString::number(rekord));
 }
 
 MainWindow::~MainWindow()
 {
+    QSettings settings("Jakomeks", "Liczownik");
+    settings.setValue("Rekord", licznik);
     delete ui;
 }
 
