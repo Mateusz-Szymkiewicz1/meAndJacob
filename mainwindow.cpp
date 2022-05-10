@@ -10,14 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     licznik = 0;
     QSettings settings("Jakomeks", "Liczownik");
-    int rekord = settings.value("Rekord").toInt();
+    rekord = settings.value("Rekord").toInt();
     ui->label_4->setText(QString::number(rekord));
 }
 
 MainWindow::~MainWindow()
 {
     QSettings settings("Jakomeks", "Liczownik");
-    settings.setValue("Rekord", licznik);
+    if(licznik > rekord){
+        settings.setValue("Rekord", licznik);
+    }
     delete ui;
 }
 

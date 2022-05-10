@@ -13,6 +13,7 @@ class MainWindow : public QMainWindow
 
 public:
     int licznik;
+    int rekord;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
