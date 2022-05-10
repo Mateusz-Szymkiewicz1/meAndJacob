@@ -25,3 +25,10 @@ void MainWindow::on_action_klos_triggered()
     close();
 }
 
+int licznik;
+void MainWindow::on_pushButton_2_clicked()
+{
+licznik = licznik+1;
+ui->label_2->setText(QString::number(licznik));
+}
+
