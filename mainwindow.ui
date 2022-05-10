@@ -40,8 +40,20 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_menju">
+    <property name="title">
+     <string>&amp;menju</string>
+    </property>
+    <addaction name="action_klos"/>
+   </widget>
+   <addaction name="menu_menju"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_klos">
+   <property name="text">
+    <string>&amp;klos</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
